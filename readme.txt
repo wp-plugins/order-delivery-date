@@ -36,7 +36,7 @@ Currently there is no provision for entering the delivery time. This is planned 
 
 = Is the order delivery date field mandatory on checkout page? =
 
-No. The field is optional.
+No. The delivery date field is optional.
 
 == Screenshots ==
 
