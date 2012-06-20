@@ -34,8 +34,8 @@ function wpefield_delivery_date()
 	
 	if($field_id != '')
 	{
-		$display = '<link rel="stylesheet" type="text/css" href="' . plugins_url() . '/order_delivery_date/datepicker.css">
-		<script type="text/javascript" src="' . plugins_url() . '/order_delivery_date/datepicker.js"></script>
+		$display = '<link rel="stylesheet" type="text/css" href="' . plugins_url() . '/order-delivery-date/datepicker.css">
+		<script type="text/javascript" src="' . plugins_url() . '/order-delivery-date/datepicker.js"></script>
 		<style>
 		.wpsc_checkout_form_'.$field_id.'
 		{
