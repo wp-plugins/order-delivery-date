@@ -18,7 +18,7 @@ The delivery date chosen by the customer will be visible to the site administrat
 This plugin allows you to improve your customer service by delivering the order on the customer's specified date.
 
 
-**Check out more free & premium plugins at [Tyche Softwares](http://www.tychesoftwares.com/store/premium-plugins/ "Tyche Softwares - the plugin shop")**
+**Check out more free & premium plugins at [Tyche Softwares](http://www.tychesoftwares.com/store/premium-plugins/viral-coupon/ "Tyche Softwares - the plugin shop")**
 
 == Installation ==
 
