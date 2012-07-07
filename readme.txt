@@ -19,8 +19,8 @@ This plugin allows you to improve your customer service by delivering the order 
 
 Other Plugins for WP e-Commerce:
 
-* [Viral Coupon Plugin for WP e-Commerce](http://wordpress.org/extend/plugins/viral-coupon-for-wp-e-commerce-lite "Viral Coupon Plugin") - Social Media Promotion Tool
-* [Email Domain Checker](http://wordpress.org/extend/plugins/email-domain-checker)
+* [Viral Coupon Plugin for WP e-Commerce](http://wordpress.org/extend/plugins/viral-coupon-for-wp-e-commerce-lite "Viral Coupon Plugin") - Social Media Promotion Tool for your store
+* [Email Domain Checker](http://wordpress.org/extend/plugins/email-domain-checker) - Validates the domain name of the email address entered at checkout
 
 
 **Check out more free & premium plugins at [Tyche Softwares](http://www.tychesoftwares.com/store/premium-plugins/viral-coupon-for-wp-e-commerce-pro "Tyche Softwares - the plugin shop")**
