@@ -17,8 +17,13 @@ The delivery date chosen by the customer will be visible to the site administrat
 
 This plugin allows you to improve your customer service by delivering the order on the customer's specified date.
 
+Other Plugins for WP e-Commerce:
 
-**Check out more free & premium plugins at [Tyche Softwares](http://www.tychesoftwares.com/store/premium-plugins/viral-coupon/ "Tyche Softwares - the plugin shop")**
+* [Viral Coupon Plugin for WP e-Commerce](http://wordpress.org/extend/plugins/viral-coupon-for-wp-e-commerce-lite "Viral Coupon Plugin") - Social Media Promotion Tool
+* [Email Domain Checker](http://wordpress.org/extend/plugins/email-domain-checker)
+
+
+**Check out more free & premium plugins at [Tyche Softwares](http://www.tychesoftwares.com/store/premium-plugins/viral-coupon-for-wp-e-commerce-pro "Tyche Softwares - the plugin shop")**
 
 == Installation ==
 
