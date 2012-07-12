@@ -23,8 +23,6 @@ Other free plugins for WP e-Commerce:
 * [Email Domain Checker](http://wordpress.org/extend/plugins/email-domain-checker) - Validates the domain name of the email address entered at checkout
 
 
-**Check out more free & premium plugins at [Tyche Softwares](http://www.tychesoftwares.com/store/premium-plugins/viral-coupon-for-wp-e-commerce-pro "Tyche Softwares - the plugin shop")**
-
 == Installation ==
 
 1. Ensure you have latest version of WP e-Commerce plugin installed
