@@ -19,9 +19,12 @@ This plugin allows you to improve your customer service by delivering the order 
 
 Other free plugins for WP e-Commerce:
 
-* [Viral Coupon Plugin for WP e-Commerce](http://wordpress.org/extend/plugins/viral-coupon-for-wp-e-commerce-lite "Viral Coupon Plugin") - Social Media Promotion Tool for your store
+* [Viral Coupon Lite Plugin for WP e-Commerce](http://wordpress.org/extend/plugins/viral-coupon-for-wp-e-commerce-lite "Viral Coupon Plugin") - Social Media Promotion Tool for your store (Facebook)
 * [Email Domain Checker](http://wordpress.org/extend/plugins/email-domain-checker) - Validates the domain name of the email address entered at checkout
 
+Premium plugins:
+
+* **[Viral Coupon Pro](http://codecanyon.net/item/viral-coupon-for-wp-ecommerce/2644621 "Viral Coupon Pro")** - Promotes your store on Twitter & Google+ in addition to Facebook.
 
 == Installation ==
 
