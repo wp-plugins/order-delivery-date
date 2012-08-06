@@ -49,7 +49,7 @@ No. The delivery date field is optional.
 
 == Screenshots ==
 
-1. The Delivery date field will be visible on checkout page, with past dates disabled.
+1. The Delivery date field will be visible on checkout page, with dates displayed as per the settings.
 
 2. The order delivery date settings in the Admin Panel for greater control.
 
