@@ -74,6 +74,7 @@ function wpefield_activate()
 		$query = "INSERT INTO $wpefield__TABLE (`id`, `name`, `type`, `mandatory`, `display_log`, `default`, `active`, `checkout_order`, `unique_name`, `options`, `checkout_set`) VALUES
 ('', 'Delivery Date', 'text', '0', '0', '0', '1', $max_count, 'e_deliverydate', '', '0');";
 		$wpdb->query($query);
+		update_option("first_install","TRUE");
 	}
 }
 function wpefield_deactivate()
@@ -124,7 +125,9 @@ function order_delivery_date_front_scripts(){
 	print('<input type="hidden" name="orderDays" id="order-days" value="'.get_option('orderDay').'">');
 	print('<input type="hidden" name="availableDays" id="availableDays" value="'.get_option('availableDays').'">');
 	
-	print('<script type="text/javascript" src="'.plugins_url().'/order-delivery-date/available-dates.js"></script>');
+	if(get_option("first_install") != "TRUE"){
+		print('<script type="text/javascript" src="'.plugins_url().'/order-delivery-date/available-dates.js"></script>');
+	}
 	print('<script type="text/javascript">
 				</script>');	
 }
@@ -136,7 +139,17 @@ function order_delivery_date_menu()
 	add_menu_page( 'Order Delivery Date','Order Delivery Date','administrator', 'order_delivery_date','order_delivery_date_settings');
 }
 function order_delivery_date_settings(){
-
+	if(get_option("first_install") == "TRUE"){
+		update_option('Monday_check','checked="checked"');	
+		update_option('Tuesday_check','checked="checked"');	
+		update_option('Wednesday_check','checked="checked"');	
+		update_option('Thursday_check','checked="checked"');	
+		update_option('Friday_check','checked="checked"');	
+		update_option('Saturday_check','checked="checked"');	
+		update_option('Sunday_check','checked="checked"');	
+		update_option('orderDay',"");
+		update_option('availableDays',"");
+	}
 	$check_prev = array();
 	
 /*	if(empty(get_option('Monday'))){
@@ -193,6 +206,7 @@ function order_delivery_date_settings(){
 			</div>');
 }
 if($_POST['save']){
+	update_option("first_install","FALSE");
 	update_option('Monday',$_POST['Monday']);	
 	update_option('Tuesday',$_POST['Tuesday']);	
 	update_option('Wednesday',$_POST['Wednesday']);	
