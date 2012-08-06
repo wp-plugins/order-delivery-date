@@ -1885,6 +1885,51 @@ $.extend(Datepicker.prototype, {
 						}
 					}
 				}
+				//alert(day);
+				//alert(month);
+
+				var current_month = "";
+				if(month==1)
+					current_month = "January";
+				else if(month==2)
+					current_month = "February";
+				else if(month==3)
+					current_month = "March";
+				else if(month==4)
+					current_month = "April";
+				else if(month==5)
+					current_month = "May";
+				else if(month==6)
+					current_month = "June";
+				else if(month==7)
+					current_month = "July";
+				else if(month==8)
+					current_month = "August";
+				else if(month==9)
+					current_month = "September";
+				else if(month==10)
+					current_month = "Octuber";
+				else if(month==11)
+					current_month = "November";
+				else if(month==12)
+					current_month = "December";
+
+				//alert(day);
+				if(day==0)
+					current_day = "Sunday";
+				else if(day==1)
+					current_day = "Monday";
+				else if(day==2)
+					current_day = "Tuesday";
+				else if(day==3)
+					current_day = "Wednesday";
+				else if(day==4)
+					current_day = "Thursday";
+				else if(day==5)
+					current_day = "Friday";
+				else if(day==6)
+					current_day = "Saturday";
+
 				var dateInfo = (!onDate ? {} :
 					onDate.apply(target, [drawDate, drawDate.getMonth() + 1 == month]));
 				var selectable = (selectOtherMonths || drawDate.getMonth() + 1 == month) &&
@@ -1903,10 +1948,11 @@ $.extend(Datepicker.prototype, {
 					' ' + renderer.highlightedClass : '') + '"' +
 					(dateInfo.title || (dayStatus && selectable) ? ' title="' +
 					(dateInfo.title || $.datepick.formatDate(
-					dayStatus, drawDate, inst.getConfig())) + '"' : '') + '>' +
+					dayStatus, drawDate, inst.getConfig())) + '"' : '') + 'date="'+drawDate.getDate()+'" month="'+month+'" day="'+current_day+'" year="'+drawDate.getFullYear()+'">' +
 					(showOtherMonths || (drawDate.getMonth() + 1) == month ?
 					dateInfo.content || drawDate.getDate() : '&nbsp;') +
 					(selectable ? '</a>' : '</span>'));
+					//alert(drawDate.getDate());
 				$.datepick.add(drawDate, 1, 'd');
 				ts = drawDate.getTime();
 			}
@@ -1960,7 +2006,7 @@ $.extend(Datepicker.prototype, {
 		var monthNames = inst.get('monthNames' + (monthHeader.match(/mm/i) ? '' : 'Short'));
 		var html = monthHeader.replace(/m+/i, '\\x2E').replace(/y+/i, '\\x2F');
 		var selector = '<select class="' + this._monthYearClass +
-			'" title="' + inst.get('monthStatus') + '">';
+			'" id="month-select-list" title="' + inst.get('monthStatus') + '">';
 		for (var m = 1; m <= 12; m++) {
 			if ((!minDate || $.datepick.newDate(year, m, $.datepick.daysInMonth(year, m)).
 					getTime() >= minDate.getTime()) &&
@@ -1989,7 +2035,7 @@ $.extend(Datepicker.prototype, {
 			var end = (yearRange[1].match('c[+-].*') ? year + parseInt(yearRange[1].substring(1), 10) :
 				((yearRange[1].match('[+-].*') ? todayYear : 0) + parseInt(yearRange[1], 10)));
 			selector = '<select class="' + this._monthYearClass +
-				'" title="' + inst.get('yearStatus') + '">';
+				'" id="year-select-list" title="' + inst.get('yearStatus') + '">';
 			start = $.datepick.add($.datepick.newDate(start + 1, 1, 1), -1, 'd');
 			end = $.datepick.newDate(end, 1, 1);
 			var addYear = function(y) {

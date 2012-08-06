@@ -1,0 +1,69 @@
+.days-fieldset{
+	border: 1px solid #DCDBDA;
+  float: left;
+  margin-bottom: 10px;
+  margin-left: 244px;
+  margin-top: 0;
+  width: 179px;
+}
+#order-days {
+  border-bottom: 1px solid #F3F3F3;
+	float: left;
+  margin-top: 5px;
+  width: 800px;
+}
+.day-checkbox{
+
+}
+#help{
+	float: right;
+	color: #AFA8A8;
+  font-size: 12px;
+  margin-right: 30px;
+  width: 300px;
+}
+#order-delay-days-tf{
+	
+}
+#order-delay-days{
+	float: left;
+  margin-top: 6px;
+  width: 800px;
+}
+.ino_titlee {
+  width: 800px!important;
+}
+#order-delivery-date-settings{
+	border: 1px solid #F3F3F3 !important;
+  height: 280px;
+  width: 812px;
+}
+label{
+	float: left;
+  font-weight: bold;
+  padding-left: 10px;
+  width: 230px;
+}
+.days-fieldset label{
+	float: left;
+  font-weight: none;
+  padding: 0px;
+  width: auto;	
+}
+input[type="checkbox"] {
+  float: left !important;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.submit_button{
+	border-top: 1px solid #F3F3F3;
+  float: left;
+  margin-top: 5px;
+  padding-bottom: 19px;
+  padding-left: 239px;
+  padding-top: 12px;
+  width: 580px;
+}
+/*#delay-help{
+	float:right;
+}*/
