@@ -67,4 +67,4 @@ No. The delivery date field is optional.
 == Upgrade Notice ==
 
 = 1.1 =
-* Newly added order delivery date settings allow the site owner to have control on dates to be presented to the customer for delivering the order.
+Newly added order delivery date settings allow the site owner to have control on dates to be presented to the customer for delivering the order.
