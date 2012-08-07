@@ -103,7 +103,14 @@ function getDateDiff(date1, date2, interval) {
 function available_dates(){
 	var delay_days = parseInt(jQuery("#order-days").val());
 	var noOfDaysToFind = parseInt(jQuery("#availableDays").val())
-	
+	//alert(delay_days+" : "+noOfDaysToFind);
+	if(isNaN(delay_days)){
+		delay_days = 0;
+	}
+	if(isNaN(noOfDaysToFind)){
+		noOfDaysToFind = 1000;
+	}
+	//alert(delay_days+" :: "+noOfDaysToFind);
 	var date = new Date();
 	var t_year = date.getFullYear();
 	var t_month = date.getMonth()+1;
