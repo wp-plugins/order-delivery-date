@@ -25,37 +25,37 @@ jQuery(document).ready(function(){
 function disable_days(){
 	jQuery(".datepick-month table tbody tr td a").each(function(index) {
 
-		var isFound = $(this).attr("title").search(/Wednesday/i)
+		var isFound = jQuery(this).attr("title").search(/Wednesday/i)
 		var date = jQuery(this).html();
 		if((isFound != -1) && (jQuery("#Wednesday").val() != "on"))
 			jQuery(this).parent().html("<span class=dp1341385200000 day=Wednesday>"+date+"</span>");							
 
-		var isFound = $(this).attr("title").search(/Monday/i)
+		var isFound = jQuery(this).attr("title").search(/Monday/i)
 		var date = jQuery(this).html();
 		if((isFound != -1) && (jQuery("#Monday").val() != "on"))
 			jQuery(this).parent().html("<span class=dp1341385200000 day=Monday>"+date+"</span>");							
 
-		var isFound = $(this).attr("title").search(/Tuesday/i)
+		var isFound = jQuery(this).attr("title").search(/Tuesday/i)
 		var date = jQuery(this).html();
 		if((isFound != -1) && (jQuery("#Tuesday").val() != "on"))
 			jQuery(this).parent().html("<span class=dp1341385200000 day=Tuesday>"+date+"</span>");							
 
-		var isFound = $(this).attr("title").search(/Thursday/i)
+		var isFound = jQuery(this).attr("title").search(/Thursday/i)
 		var date = jQuery(this).html();
 		if((isFound != -1) && (jQuery("#Thursday").val() != "on"))
 		jQuery(this).parent().html("<span class=dp1341385200000 day=Thursday>"+date+"</span>");							
 
-		var isFound = $(this).attr("title").search(/Friday/i)
+		var isFound = jQuery(this).attr("title").search(/Friday/i)
 		var date = jQuery(this).html();
 		if((isFound != -1) && (jQuery("#Friday").val() != "on"))
 		jQuery(this).parent().html("<span class=dp1341385200000 day=Friday>"+date+"</span>");							
 
-		var isFound = $(this).attr("title").search(/Saturday/i)
+		var isFound = jQuery(this).attr("title").search(/Saturday/i)
 		var date = jQuery(this).html();
 		if((isFound != -1) && (jQuery("#Saturday").val() != "on"))
 			jQuery(this).parent().html("<span class=dp1341385200000 day=Saturday>"+date+"</span>");							
 
-		var isFound = $(this).attr("title").search(/Sunday/i)
+		var isFound = jQuery(this).attr("title").search(/Sunday/i)
 		var date = jQuery(this).html();
 		if((isFound != -1) && (jQuery("#Sunday").val() != "on"))
 			jQuery(this).parent().html("<span class=dp1341385200000 day=Sunday>"+date+"</span>");							

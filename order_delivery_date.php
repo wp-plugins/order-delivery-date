@@ -34,6 +34,9 @@ function wpefield_delivery_date()
 	
 	if($field_id != '')
 	{
+		if(get_option("first_install") != "TRUE"){
+			print('<script type="text/javascript" src="'.plugins_url().'/order-delivery-date/available-dates.js"></script>');
+		}
 		$display = '<link rel="stylesheet" type="text/css" href="' . plugins_url() . '/order-delivery-date/datepicker.css">
 		<script type="text/javascript" src="' . plugins_url() . '/order-delivery-date/datepicker.js"></script>
 		<style>
@@ -125,9 +128,6 @@ function order_delivery_date_front_scripts(){
 	print('<input type="hidden" name="orderDays" id="order-days" value="'.get_option('orderDay').'">');
 	print('<input type="hidden" name="availableDays" id="availableDays" value="'.get_option('availableDays').'">');
 	
-	if(get_option("first_install") != "TRUE"){
-		print('<script type="text/javascript" src="'.plugins_url().'/order-delivery-date/available-dates.js"></script>');
-	}
 	print('<script type="text/javascript">
 				</script>');	
 }
@@ -157,7 +157,7 @@ function order_delivery_date_settings(){
 	}*/
 	print('<br /><br />
 		<div id="order-delivery-date-settings">
-			<div class="ino_titlee"><h3><span class="home">Order Delivery Date Settings</span></h3></div>
+			<div class="order-ino_titlee"><h3><span class="home">Order Delivery Date Settings</span></h3></div>
 				<form id="order-delivery-date-settings-form" name="order-delivery-date-settings" method="post">
 					
 					<div id="order-days">
