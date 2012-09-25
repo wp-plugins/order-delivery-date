@@ -37,7 +37,7 @@ function wpefield_delivery_date()
 		
 	    wp_enqueue_script( 'jquery' );
 	    
-	    if(get_option("first_install") != "TRUE")
+	    //if(get_option("first_install") != "TRUE")
 	    {
 		    wp_enqueue_script( 'jquery-ui-datepicker' );
 		    
@@ -100,8 +100,25 @@ function wpefield_activate()
 		$query = "INSERT INTO $wpefield__TABLE (`id`, `name`, `type`, `mandatory`, `display_log`, `default`, `active`, `checkout_order`, `unique_name`, `options`, `checkout_set`) VALUES
 ('', 'Delivery Date', 'text', '0', '0', '0', '1', $max_count, 'e_deliverydate', '', '0');";
 		$wpdb->query($query);
-		update_option("first_install","TRUE");
+		//update_option("first_install","TRUE");
 	}
+	
+	update_option('Monday_check','checked');
+	update_option('Tuesday_check','checked');
+	update_option('Wednesday_check','checked');
+	update_option('Thursday_check','checked');
+	update_option('Friday_check','checked');
+	update_option('Saturday_check','');
+	update_option('Sunday_check','');
+	update_option('Monday','on');
+	update_option('Tuesday','on');
+	update_option('Wednesday','on');
+	update_option('Thursday','on');
+	update_option('Friday','on');
+	update_option('Saturday','');
+	update_option('Sunday','');
+	update_option('orderDay','0');
+	update_option('availableDays','30');
 }
 function wpefield_deactivate()
 {
@@ -109,6 +126,24 @@ function wpefield_deactivate()
 	$wpefield__TABLE = $wpdb->prefix . 'wpsc_checkout_forms';
 	$query = "delete from $wpefield__TABLE where unique_name = 'e_deliverydate'";
 	$wpdb->query( $query );
+	
+	delete_option('Monday_check');
+	delete_option('Tuesday_check');
+	delete_option('Wednesday_check');
+	delete_option('Thursday_check');
+	delete_option('Friday_check');
+	delete_option('Saturday_check');
+	delete_option('Sunday_check');
+	delete_option('Monday');
+	delete_option('Tuesday');
+	delete_option('Wednesday');
+	delete_option('Thursday');
+	delete_option('Friday');
+	delete_option('Saturday');
+	delete_option('Sunday');
+	delete_option('orderDay');
+	delete_option('availableDays');
+	
 }
 add_action('wpsc_before_form_of_shopping_cart', 'wpefield_delivery_date');
 register_activation_hook( __FILE__, 'wpefield_activate' );
@@ -162,17 +197,7 @@ function order_delivery_date_menu()
 	add_menu_page( 'Order Delivery Date','Order Delivery Date','administrator', 'order_delivery_date','order_delivery_date_settings');
 }
 function order_delivery_date_settings(){
-	if(get_option("first_install") == "TRUE"){
-		update_option('Monday_check','checked="checked"');	
-		update_option('Tuesday_check','checked="checked"');	
-		update_option('Wednesday_check','checked="checked"');	
-		update_option('Thursday_check','checked="checked"');	
-		update_option('Friday_check','checked="checked"');	
-		update_option('Saturday_check','checked="checked"');	
-		update_option('Sunday_check','checked="checked"');	
-		update_option('orderDay',"");
-		update_option('availableDays',"");
-	}
+	
 	$check_prev = array();
 	
 /*	if(empty(get_option('Monday'))){
@@ -235,8 +260,9 @@ function order_delivery_date_settings(){
 				</form>
 			</div>');
 }
-if($_POST['save']){
-	update_option("first_install","FALSE");
+if($_POST['save'])
+{
+	//update_option("first_install","FALSE");
 	update_option('Monday',$_POST['Monday']);	
 	update_option('Tuesday',$_POST['Tuesday']);	
 	update_option('Wednesday',$_POST['Wednesday']);	
