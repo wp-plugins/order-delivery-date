@@ -42,6 +42,11 @@
 
 .ino_titlee {
   width: 800px!important;
+	background: none repeat scroll 0 0 #EEEEEE;
+    border-left: 1px solid #ECEDE0;
+    border-right: 1px solid #ECEDE0;
+    border-top: 1px solid #ECEDE0;
+    height:40px;
 }
 #order-delivery-date-settings{
 	border: 1px solid #F3F3F3 !important;

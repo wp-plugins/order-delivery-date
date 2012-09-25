@@ -34,11 +34,33 @@ function wpefield_delivery_date()
 	
 	if($field_id != '')
 	{
-		if(get_option("first_install") != "TRUE"){
+		
+	    wp_enqueue_script( 'jquery' );
+	    
+	    if(get_option("first_install") != "TRUE")
+	    {
+		    wp_enqueue_script( 'jquery-ui-datepicker' );
+		    
+		    wp_enqueue_style( 'jquery-ui', "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css" , '', '', false);
+		    
+		    wp_enqueue_script(
+				'initialize-datepicker.js',
+				plugins_url('/js/initialize-datepicker.js', __FILE__),
+				'',
+				'',
+				false
+			);
+	    }
+	    //http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css
+	    
+	
+		/*if(get_option("first_install") != "TRUE"){
 			print('<script type="text/javascript" src="'.plugins_url().'/order-delivery-date/available-dates.js"></script>');
 		}
 		$display = '<link rel="stylesheet" type="text/css" href="' . plugins_url() . '/order-delivery-date/datepicker.css">
-		<script type="text/javascript" src="' . plugins_url() . '/order-delivery-date/datepicker.js"></script>
+		<script type="text/javascript" src="' . plugins_url() . '/order-delivery-date/datepicker.js"></script>';*/
+		
+		$display = '
 		<style>
 		.wpsc_checkout_form_'.$field_id.'
 		{
@@ -51,15 +73,16 @@ function wpefield_delivery_date()
 		</style>
 		<script type="text/javascript">
         jQuery(function() {
-			var formats = ["MM d, yyyy","MM d, yyyy"];
+			var formats = ["MM d, yy","MM d, yy"];
 			jQuery("#wpsc_checkout_form_'.$field_id.'").width("150px");
-			jQuery("#wpsc_checkout_form_'.$field_id.'").val("").datepick({dateFormat: formats[1], minDate:1});
+			jQuery("#wpsc_checkout_form_'.$field_id.'").val("").datepicker({dateFormat: formats[1], beforeShow: avd, beforeShowDay: chd});
 			jQuery("#wpsc_checkout_form_'.$field_id.'").parent().append("<small style=\'font-size:10px;\'>We will try our best to deliver your order on the specified date</small>");
         });
         </script>';
 		echo $display;
 	}
 }
+
 function wpefield_activate()
 {
 	global $wpdb;
@@ -155,9 +178,16 @@ function order_delivery_date_settings(){
 /*	if(empty(get_option('Monday'))){
 			$check_prev['monday'] = ""; 
 	}*/
-	print('<br /><br />
-		<div id="order-delivery-date-settings">
-			<div class="order-ino_titlee"><h3><span class="home">Order Delivery Date Settings</span></h3></div>
+
+	print('<br>');
+	if($_POST['save'] != "")
+	{
+		print('<div id="message" class="updated"><p>All changes have been saved.</p></div>');
+	}
+	print('<br>');
+
+	print('<div id="order-delivery-date-settings">
+			<div class="ino_titlee"><h3><span class="home">Order Delivery Date Settings</span></h3></div>
 				<form id="order-delivery-date-settings-form" name="order-delivery-date-settings" method="post">
 					
 					<div id="order-days">
