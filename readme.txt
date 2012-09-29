@@ -1,11 +1,12 @@
 === Order Delivery Date for WP e-Commerce ===
 Contributors: ashokrane
-Tags: delivery date, checkout, order delivery
+Tags: delivery date, checkout, order delivery, calendar
 Requires at least: 3.2
 Tested up to: 3.4
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Donate link: http://www.tychesoftwares.com/
 
 Allow the customers to choose an order delivery date on the checkout page for WP e-Commerce store owners.
 
