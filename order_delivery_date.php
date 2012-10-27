@@ -216,42 +216,42 @@ function order_delivery_date_settings(){
 				<form id="order-delivery-date-settings-form" name="order-delivery-date-settings" method="post">
 					
 					<div id="order-days">
-						<label for="delivery-days-tf">Delivery Days: </label>
+						<label  class="orddd_label" for="delivery-days-tf">Delivery Days: </label>
 						<fieldset class="days-fieldset">
 							<legend><b>Days:</b></legend>
 								<input type="checkbox" name="Monday" id="Monday" class="day-checkbox" '.get_option('Monday_check').' />
-								<label for="Monday">Monday</label>
+								<label  class="orddd_label" for="Monday">Monday</label>
 								<br />
 								<input type="checkbox" name="Tuesday" id="Tuesday" class="day-checkbox" '.get_option('Tuesday_check').' />
-								<label for="Tuesday">Tuesday</label>
+								<label  class="orddd_label" for="Tuesday">Tuesday</label>
 								<br />
 								<input type="checkbox" name="Wednesday" id="Wednesday" class="day-checkbox" '.get_option('Wednesday_check').' />
-								<label for="Wednesday">Wednesday</label>
+								<label  class="orddd_label" for="Wednesday">Wednesday</label>
 								<br />
 								<input type="checkbox" name="Thursday" id="Thursday" class="day-checkbox" '.get_option('Thursday_check').' />
-								<label for="Thursday">Thursday</label>
+								<label  class="orddd_label" for="Thursday">Thursday</label>
 								<br />
 								<input type="checkbox" name="Friday" id="Friday" class="day-checkbox" '.get_option('Friday_check').' />
-								<label for="Friday">Friday</label>
+								<label  class="orddd_label" for="Friday">Friday</label>
 								<br />
 								<input type="checkbox" name="Saturday" id="Saturday" class="day-checkbox" '.get_option('Saturday_check').' />
-								<label for="Saturday">Saturday</label>
+								<label  class="orddd_label" for="Saturday">Saturday</label>
 								<br />
 								<input type="checkbox" name="Sunday" id="Sunday" class="day-checkbox" '.get_option('Sunday_check').' />
-								<label for="Sunday">Sunday</label>
+								<label  class="orddd_label" for="Sunday">Sunday</label>
 								<br />
 						</fieldset>
 						<div id="help">Select the week days when the delivery of items takes place. For example, if you deliver only on Tuesday, Wednesday, Thursday & Friday, then select only those days here. The remaining days will not be available for selection to the customer.</div>
 					</div>
 
 					<div id="order-delay-days">
-						<label for="order-delay-days-tf">Minimum Delivery time (in days): </label>
+						<label  class="orddd_label" for="order-delay-days-tf">Minimum Delivery time (in days): </label>
 						<input type="text" name="orderday" id="orderday" value="'.get_option('OrderDay').'"/>
 						<div id="help" >Enter the minimum number of days it takes for you to deliver an order. For example, if it takes 2 days atleast to ship an order, enter 2 here. The customer can select a date that is available only after the minimum days that are entered here.<br></div>
 					</div>
 
 					<div id="available-days">
-						<label for="available-days-tf">Number of dates to choose: </label>
+						<label  class="orddd_label" for="available-days-tf">Number of dates to choose: </label>
 						<input type="text" name="available-days-tf" id="available-days-tf" value="'.get_option('availableDays').'"/>
 						<div id="help">Based on the above 2 settings, you can decide how many dates should be made available to the customer to choose from. For example, if you enter 10, then 10 different dates will be made available to the customer to choose.</div>
 					</div>
