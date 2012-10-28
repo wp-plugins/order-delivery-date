@@ -1,6 +1,6 @@
 === Order Delivery Date for WP e-Commerce ===
 Contributors: ashokrane
-Tags: delivery date, checkout, order delivery, calendar
+Tags: delivery date, checkout, order delivery, calendar, checkout calendar, datepicker
 Requires at least: 3.2
 Tested up to: 3.4
 Stable tag: trunk
@@ -50,11 +50,11 @@ This plugin allows you to improve your customer service by delivering the order 
 
 = Can the customer enter the preferred order delivery time? =
 
-Currently there is no provision for entering the delivery time in the free version. This is possible in the Version 2.0. [View Demo](http://www.tychesoftwares.com/store/premium-plugins/order-delivery-date-for-wp-e-commerce-woocommerce-pro "View Demo")
+Currently there is no provision for entering the delivery time in the free version. This is possible in the Version 2.1. [View Demo](http://www.tychesoftwares.com/store/premium-plugins/order-delivery-date-for-wp-e-commerce-pro "View Demo")
 
 = Is the order delivery date field mandatory on checkout page? =
 
-No. The delivery date field is optional in the free version. The field can be configured as Mandatory or optional in the Version 2.0. [View Demo](http://www.tychesoftwares.com/store/premium-plugins/order-delivery-date-for-wp-e-commerce-woocommerce-pro "View Demo")
+No. The delivery date field is optional in the free version. The field can be configured as Mandatory or optional in the Version 2.1. [View Demo](http://www.tychesoftwares.com/store/premium-plugins/order-delivery-date-for-wp-e-commerce-pro "View Demo")
 
 == Screenshots ==
 
